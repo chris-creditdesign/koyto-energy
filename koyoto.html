@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>	
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script type="text/javascript" src="js/koyoto.js" ></script>	
+<link rel="stylesheet" type="text/css" media="screen, projection" href="css/koyoto.css" />		
+
+
+
+
+<div id="outerWrapper">
+
+<div class="buttons">
+  
+<div class="fuelType">
+<p>Choose fuel type</p>
+
+<div class="icons">
+<div id="coal"></div>
+<div id="oil"></div>
+<div id="gas"></div>
+<div id="nuclear"></div>
+<div id="renewable"></div>
+</div>
+
+<div class="iconsUnder">
+<div id="coalText">Coal</div>
+<div id="oilText">Oil</div>
+<div id="gasText">Gas</div>
+<div id="nuclearText">Nuclear</div>
+<div id="renewableText">Hydro/<br />Renewable</div>
+</div>
+
+</div>
+
+<div class="adjustScale">
+<p>Adjust scale</p>
+<div class="icons">
+<div id="zoomOut"></div>  
+<div id="zoomIn"></div>
+
+</div>
+
+<div class="iconsUnder">
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+<div class="scaleBox"></div>
+</div>
+
+</div>
+
+<div class="selection">
+    <div id="country">Choose countries to display</div> 
+</div>
+
+</div>
+
+<div id="holder">
+	
+<div id="units">Energy use in million tonnes of oil equivalent (Mtoe)</div>
+	
+<div id="scale">
+  <span style="left:0px">0</span>
+  <span style="left:100px">100</span>
+  <span style="left:200px">200</span>
+  <span style="left:300px">300</span>
+  <span style="left:400px">400</span>
+  <span style="left:500px">500</span>
+  <span style="left:600px">600</span>
+  <span style="left:700px">700</span>
+  <span style="left:800px">800</span>
+  <span style="left:900px">900</span>
+  <span style="left:1000px">1,000</span>
+  <span style="left:1100px">1,100</span>
+  <span style="left:1200px">1,200</span>
+  <span style="left:1300px">1,300</span>
+  <span style="left:1400px">1,400</span>
+  <span style="left:1500px">1,500</span>
+  <span style="left:1600px">1,600</span>
+  <span style="left:1700px">1,700</span>
+  <span style="left:1800px">1,800</span>
+  <span style="left:1900px">1,900</span>
+  <span style="left:2000px">2,000</span>
+  <span style="left:2100px">2,100</span>
+  <span style="left:2200px">2,200</span>
+  <span style="left:2300px">2,300</span>
+  <span style="left:2400px">2,400</span>
+  <span style="left:2500px">2,500</span>
+  <span style="left:2600px">2,600</span>
+  <span style="left:2700px">2,700</span>
+  <span style="left:2800px">2,800</span>
+  <span style="left:2900px">2,900</span>
+  <span style="left:3000px">3,000</span>
+  <span style="left:3100px">3,100</span>     
+</div>
+
+<div id="smallScale">
+  <span style="left:0px">0</span>
+  <span style="left:10px">10</span>
+  <span style="left:20px">20</span>
+  <span style="left:30px">30</span>
+  <span style="left:40px">40</span>
+  <span style="left:50px">50</span>
+  <span style="left:60px">60</span>
+  <span style="left:70px">70</span>
+  <span style="left:80px">80</span>
+  <span style="left:90px">90</span>
+  <span style="left:100px">100</span>
+  <span style="left:110px">110</span>
+  <span style="left:120px">120</span>
+  <span style="left:130px">130</span>
+  <span style="left:140px">140</span>
+  <span style="left:150px">150</span>
+  <span style="left:160px">160</span>
+  <span style="left:170px">170</span>
+  <span style="left:180px">180</span>
+  <span style="left:190px">190</span>       
+</div>
+
+
+<div id="graph"></div>
+<div id="labels"></div>
+</div>
+
+  <div id="checkBoxes">
+  <div class="continent all on" id="all"  data-continent="all">All countries</div>
+  <div class="continent on" id="europe"  data-continent="europe">Europe &#38; Eurasia</div>
+  <div class="continent on" id="asia" data-continent="asia">Asia Pacific</div>
+  <div class="continent on" id="samerica" data-continent="samerica">South &#38; Central America</div>
+  <div class="continent on" id="africa" data-continent="africa">Africa</div>
+  <div class="continent on" id="namerica" data-continent="namerica">North America</div>
+  <div class="continent on" id="middleeast" data-continent="middleeast">Middle East</div>         
+  <div class="country on" >Algeria</div>
+  <div class="country on" >Argentina</div>
+  <div class="country on" >Australia</div>
+  <div class="country on" >Austria</div>
+  <div class="country on" >Belgium</div>
+  <div class="country on" >Brazil</div>
+  <div class="country on" >Canada</div>
+  <div class="country on" >Chile</div>
+  <div class="country on" >Mainland China</div>
+  <div class="country on" >Colombia</div>
+  <div class="country on" >Czech Republic</div>
+  <div class="country on" >Egypt</div>
+  <div class="country on" >Finland</div>
+  <div class="country on" >France</div>
+  <div class="country on" >Germany</div>
+  <div class="country on" >Greece</div>
+  <div class="country on" >Hong Kong</div>
+  <div class="country on" >India</div>
+  <div class="country on" >Indonesia</div>
+  <div class="country on" >Iran</div>
+  <div class="country on" >Italy</div>
+  <div class="country on" >Japan</div>
+  <div class="country on" >Kazakhstan</div>
+  <div class="country on" >Kuwait</div>
+  <div class="country on" >Malaysia</div>
+  <div class="country on" >Mexico</div>
+  <div class="country on" >Netherlands</div>
+  <div class="country on" >Norway</div>
+  <div class="country on" >Pakistan</div>
+  <div class="country on" >Philippines</div>
+  <div class="country on" >Poland</div>
+  <div class="country on" >Qatar</div>
+  <div class="country on" >Romania</div>
+  <div class="country on" >Russia</div>
+  <div class="country on" >Saudi Arabia</div>
+  <div class="country on" >Singapore</div>
+  <div class="country on" >South Africa</div>
+  <div class="country on" >South Korea</div>
+  <div class="country on" >Spain</div>
+  <div class="country on" >Sweden</div>
+  <div class="country on" >Taiwan</div>
+  <div class="country on" >Thailand</div>
+  <div class="country on" >Turkey</div>
+  <div class="country on" >Ukraine</div>
+  <div class="country on" >United Arab Emirates</div>
+  <div class="country on" >United Kingdom</div>
+  <div class="country on" >United States</div>
+  <div class="country on" >Uzbekistan</div>
+  <div class="country on" >Venezuela</div>
+  <div class="country on" >Vietnam</div>
+  </div>
+
+</div>

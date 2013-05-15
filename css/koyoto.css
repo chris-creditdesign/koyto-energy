@@ -1,0 +1,439 @@
+#outerWrapper {
+  width: 610px;
+  height: 1257px;
+  position: relative;
+  background-color: #EEE7E4;
+  font-size: .9em;
+  line-height: 1.2em;  
+}
+
+#holder {
+  width: 600px;
+  height: 1070px;
+  position: absolute;
+  left: 5px;
+  top: 190px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#units {
+  width: 590px;
+  height: 20px;
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+#scale {
+  width: 590px;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  overflow: hidden;
+
+}
+
+#scale span {
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  overflow: visible;
+}
+
+#smallScale {
+  width: 590px;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  overflow: hidden;
+
+}
+
+#smallScale span {
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  overflow: visible;
+  opacity: 0;
+}
+
+#labels {
+  width: 590px;
+  height: 1015px;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+  overflow: visible;
+}
+
+#labels span {
+  position: absolute;
+  height: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+#labels span .amount {
+  position: relative;
+  height: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+
+
+#graph {
+  width: 590px;
+  height: 1015px;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+
+}
+
+
+.buttons {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 600px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+.fuelType {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 420px;
+  height: 105px;
+  text-align: center;
+}
+
+.icons {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.iconsUnder {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.scaleBox {
+  width: 18px;
+  height: 12px;
+  background-color: #eee;
+  float: left;
+  margin-left: 2px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.scaleBox:hover {
+  background-color: #666;
+}
+
+#coal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 54px;
+  background-color: #666;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7637.1354034094!/image/coal.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  -moz-box-shadow:    0px -4px 0px 0px #000;
+  -webkit-box-shadow: 0px -4px 0px 0px #000;
+  box-shadow:         0px -4px 0px 0px #000;
+}
+
+
+#coalText {
+  position: absolute;
+  width: 80px;
+  top: 0px;
+  left: 0px;
+}
+
+#oil {
+  position: absolute;
+  top: 0px;
+  left: 84px;
+  width: 80px;
+  height: 54px;
+  background-color: #8D97B9;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7641.1354034184!/image/oil.png);
+  background-repeat: no-repeat;
+  -moz-box-shadow:    0px 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px 0px #000;
+  box-shadow:         0px 0px 0px 0px #000;
+}
+
+#oilText {
+  position: absolute;
+  width: 80px;
+  top: 0px;
+  left: 84px;
+}
+
+#gas {
+  position: absolute;
+  top: 0px;
+  left: 168px;
+  width: 80px;
+  height: 54px;
+  background-color: #B5C0DE;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7638.1354034122!/image/gas.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -moz-box-shadow:    0px 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px 0px #000;
+  box-shadow:         0px 0px 0px 0px #000;
+}
+
+#gasText {
+  position: absolute;
+  width: 80px;
+  top: 0px;  
+  left: 168px;
+}
+
+#nuclear {
+  position: absolute;
+  top: 0px;
+  left: 252px;
+  width: 80px;
+  height: 54px;
+  background-color: #F6D976;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7639.1354034139!/image/nuclear.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -moz-box-shadow:    0px 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px 0px #000;
+  box-shadow:         0px 0px 0px 0px #000;
+}
+
+#nuclearText {
+  position: absolute;
+  width: 80px;
+  top: 0px;
+  left: 252px;
+}
+
+#renewable {
+  position: absolute;
+  top: 0px;
+  left: 336px;
+  width: 80px;
+  height: 54px;
+  background-color: #A38C6D;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7643.1354034231!/image/renewable.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -moz-box-shadow:    0px 0px 0px 0px #000;
+  -webkit-box-shadow: 0px 0px 0px 0px #000;
+  box-shadow:         0px 0px 0px 0px #000;
+}
+
+#renewableText {
+  position: absolute;
+  width: 80px;
+  top: 0px;
+  left: 336px;  
+}
+
+.adjustScale {
+  position: absolute;
+  top: 0px;
+  left: 436px;
+  width: 164px;
+  height: 105px;
+  text-align: center;
+}
+
+#zoomIn {
+  position: absolute;
+  top: 0px;
+  left: 84px;
+  width: 80px;
+  height: 54px;
+  background-color: #eee;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7644.1354034249!/image/zoomin.png);  
+}
+
+#zoomIn:hover {
+  background-color: #fff;  
+}
+
+#zoomOut {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 54px;
+  background-color: #eee;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  background-image: url(http://www.nature.com/polopoly_fs/7.7645.1354034270!/image/zoomout.png);
+}
+
+#zoomOut:hover {
+  background-color: #fff;  
+}
+
+.selection {
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  width: 600px;
+  text-align: center;
+  background: #999;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.selection div {
+  padding: 1px 0px;
+  background: #B7B7B7;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  list-style: none;
+  margin: 5px;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.selection div:hover {
+  background: #ddd;  
+}
+
+#checkBoxes {
+  position: absolute;
+  left: 5px;
+  top: 177px;  
+  background: #666;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  width: 600px;
+  display: none;
+}
+
+#checkBoxes div{
+  padding: 1px 0px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  list-style: none;
+  margin: 5px;
+  width: 190px;
+  float: left;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;   
+}
+
+#checkBoxes .continent{
+  width: 590px;
+}
+
+#checkBoxes .on{
+  background: #ccc; 
+}
+
+.on:before {
+  content:url(http://www.nature.com/polopoly_fs/7.7642.1354034210!/image/on.png);
+  margin: 0 5px;
+}
+
+#checkBoxes .off{
+  background: #949494;
+}
+
+.off:before {
+  content:url(http://www.nature.com/polopoly_fs/7.7640.1354034165!/image/off.png);
+  margin: 0 5px;
+}
+
+#europeList {
+  float: left;
+}
+
+#asiaList {
+  float: left;
+}
+
+#samericaList {
+  float: left;
+}
+
+#namericaList {
+  float: left;
+}
+
+#middleeastList {
+  clear: both;
+}
